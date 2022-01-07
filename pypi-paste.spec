@@ -17,13 +17,13 @@ BuildRequires : buildreq-distutils3
 Provides: Paste
 Provides: Paste-python
 Provides: Paste-python3
-BuildRequires : pluggy
+BuildRequires : pypi(pluggy)
 BuildRequires : py-python
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(six)
 BuildRequires : pytest
 BuildRequires : tox
-BuildRequires : virtualenv
+BuildRequires : pypi(virtualenv)
 
 %description
 Paste provides several pieces of "middleware" (or filters) that can be nested
