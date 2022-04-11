@@ -4,7 +4,7 @@
 #
 Name     : pypi-paste
 Version  : 3.5.0
-Release  : 91
+Release  : 92
 URL      : https://files.pythonhosted.org/packages/b7/e0/eb502f90e14570c88ed108a101ff223ccc853e2ba057ac4e7d6eb40c923e/Paste-3.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/b7/e0/eb502f90e14570c88ed108a101ff223ccc853e2ba057ac4e7d6eb40c923e/Paste-3.5.0.tar.gz
 Summary  : Tools for using a Web Server Gateway Interface stack
@@ -14,16 +14,13 @@ Requires: pypi-paste-license = %{version}-%{release}
 Requires: pypi-paste-python = %{version}-%{release}
 Requires: pypi-paste-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: Paste
-Provides: Paste-python
-Provides: Paste-python3
-BuildRequires : pypi(pluggy)
-BuildRequires : py-python
+BuildRequires : pypi(py)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(six)
-BuildRequires : pytest
-BuildRequires : tox
-BuildRequires : pypi(virtualenv)
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 
 %description
 Paste provides several pieces of "middleware" (or filters) that can be nested
@@ -69,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641466484
+export SOURCE_DATE_EPOCH=1649697608
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
