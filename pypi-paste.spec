@@ -4,7 +4,7 @@
 #
 Name     : pypi-paste
 Version  : 3.5.2
-Release  : 100
+Release  : 101
 URL      : https://files.pythonhosted.org/packages/4c/2b/2e44afea5f8e397a5ce0f7ef78a79647f2c21e3fd7a463bf3be13aa6e819/Paste-3.5.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4c/2b/2e44afea5f8e397a5ce0f7ef78a79647f2c21e3fd7a463bf3be13aa6e819/Paste-3.5.2.tar.gz
 Summary  : Tools for using a Web Server Gateway Interface stack
@@ -21,6 +21,9 @@ BuildRequires : pypi-pluggy
 BuildRequires : pypi-pytest
 BuildRequires : pypi-tox
 BuildRequires : pypi-virtualenv
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 Paste provides several pieces of "middleware" (or filters) that can be nested
@@ -69,12 +72,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1661193369
+export SOURCE_DATE_EPOCH=1672297666
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$FFLAGS -fno-lto "
-export FFLAGS="$FFLAGS -fno-lto "
-export CXXFLAGS="$CXXFLAGS -fno-lto "
+export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
@@ -91,7 +94,7 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-paste
-cp %{_builddir}/Paste-%{version}/docs/license.txt %{buildroot}/usr/share/package-licenses/pypi-paste/391729571488896efa70494919f96aab67116ad1
+cp %{_builddir}/Paste-%{version}/docs/license.txt %{buildroot}/usr/share/package-licenses/pypi-paste/391729571488896efa70494919f96aab67116ad1 || :
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
