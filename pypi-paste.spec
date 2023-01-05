@@ -4,7 +4,7 @@
 #
 Name     : pypi-paste
 Version  : 3.5.2
-Release  : 101
+Release  : 102
 URL      : https://files.pythonhosted.org/packages/4c/2b/2e44afea5f8e397a5ce0f7ef78a79647f2c21e3fd7a463bf3be13aa6e819/Paste-3.5.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4c/2b/2e44afea5f8e397a5ce0f7ef78a79647f2c21e3fd7a463bf3be13aa6e819/Paste-3.5.2.tar.gz
 Summary  : Tools for using a Web Server Gateway Interface stack
