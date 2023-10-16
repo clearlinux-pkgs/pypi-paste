@@ -1,5 +1,5 @@
 PKG_NAME := pypi-paste
-URL = https://files.pythonhosted.org/packages/ca/89/52b6128fedd114bf54e62a1d5c338dcc7edf39c992621e7f5694461b4e92/Paste-3.6.0.tar.gz
+URL = https://files.pythonhosted.org/packages/0b/f1/ccfbeb98fa3843fb031bde9e1d91cbd4a92270c4a28a9253dfc4edf913ce/Paste-3.6.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
