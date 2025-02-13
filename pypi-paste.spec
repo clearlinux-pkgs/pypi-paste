@@ -7,7 +7,7 @@
 #
 Name     : pypi-paste
 Version  : 3.10.1
-Release  : 113
+Release  : 114
 URL      : https://files.pythonhosted.org/packages/d7/1c/6bc9040bf9b4cfc9334f66d2738f952384c106c48882adf6097fed3da966/paste-3.10.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d7/1c/6bc9040bf9b4cfc9334f66d2738f952384c106c48882adf6097fed3da966/paste-3.10.1.tar.gz
 Summary  : Tools for using a Web Server Gateway Interface stack
